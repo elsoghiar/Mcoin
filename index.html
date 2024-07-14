@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Airdrop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="splash-screen">
+        <div class="loader"></div>
+    </div>
+    <div class="main-container" style="display: none;">
+        <div class="counter-container">
+            <div class="counter" id="counter">0</div>
+            <p>Mining in progress...</p>
+        </div>
+        <div class="button-container">
+            <button onclick="showReferralPage()">Referral Rewards</button>
+            <button onclick="showWithdrawPage()">Withdraw Coins</button>
+        </div>
+    </div>
+    <div class="referral-container" style="display: none;">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <div class="referral-content">
+            <h2>Your Referral Link</h2>
+            <input type="text" id="referral-link" readonly>
+            <button onclick="copyReferralLink()">Copy Link</button>
+            <p>For every friend invitation you will get 1000 coins </p>
+        </div>
+    </div>
+    <div class="withdraw-container" style="display: none;">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <div class="withdraw-content">
+            <h2>Coming Soon</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

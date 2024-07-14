@@ -1,0 +1,117 @@
+:root {
+    --main-bg: #121212;
+    --accent-color: #FF9800;
+    --text-color: #FFFFFF;
+    --button-bg: #1E1E1E;
+    --button-hover-bg: #333333;
+    --input-bg: #1E1E1E;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.splash-screen, .main-container, .referral-container, .withdraw-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid var(--accent-color);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-container button, .back-button, .referral-content button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.button-container button:hover, .back-button:hover, .referral-content button:hover {
+    background: var(--button-hover-bg);
+}
+
+.referral-container, .withdraw-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.referral-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.referral-content input {
+    width: 80%;
+    padding: 10px;
+    background: var(--input-bg);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.withdraw-content {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    align-self: flex-start;
+    margin-left: 20px;
+}
